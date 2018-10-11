@@ -15,6 +15,7 @@ const data = [
         date_time: 1539253304,
         payload: {
             intent: "topFundsBySector",
+            title: "Top Funds in Energy Sector",
             tags: ["energy"],
             type: "suggestion",
             response: [
@@ -38,6 +39,7 @@ const data = [
         date_time: 1539257435,
         payload: {
             intent: "topFundsBySector",
+            title: "Top Funds from Fidelity in Energy Sector",
             tags: ["energy", "fidelity"],
             type: "suggestion",
             response: [

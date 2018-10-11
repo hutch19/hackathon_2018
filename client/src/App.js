@@ -21,7 +21,19 @@ class App extends Component {
 
       let messages = this.state.messages.slice();
       messages.unshift(element);
-      if (messages.length > 5) messages = messages.slice(0, 5);
+
+
+      if (messages.length > 5) {
+        const notPinned = [];
+        messages.forEach((e,i) => {
+          if(!e.pinned) notPinned.push(i);
+        });
+        console.log(notPinned);
+        while(messages.length > 5 && notPinned.length > 0) {
+          const remove = notPinned.pop();
+          messages.splice(remove, 1);
+        }
+      }
       this.setState({
         messages: messages
       })

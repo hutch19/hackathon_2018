@@ -21,3 +21,15 @@
     color: #dc3545 !important;
     opacity: 1.0;
 }
+
+.card-header {
+    padding: .45rem 1.25rem;
+}
+
+.card-footer {
+    padding: .45rem 1.25rem;
+}
+
+.card-body {
+    padding: 1rem;
+}
