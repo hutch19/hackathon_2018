@@ -1,4 +1,5 @@
 const WebSocketServer = require('ws').Server
+const express = require('express')
 
 const wss = new WebSocketServer({port: 40510})
 
@@ -71,3 +72,8 @@ setInterval(
     2000
   )
 
+
+const app = express()
+const port = 3001
+app.get('/example', (req, res) => res.send('Hello World!'))
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
