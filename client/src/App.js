@@ -28,7 +28,6 @@ class App extends Component {
         messages.forEach((e,i) => {
           if(!e.pinned) notPinned.push(i);
         });
-        console.log(notPinned);
         while(messages.length > 5 && notPinned.length > 0) {
           const remove = notPinned.pop();
           messages.splice(remove, 1);
